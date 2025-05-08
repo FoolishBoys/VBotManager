@@ -180,7 +180,8 @@ class FileService(metaclass=Singleton):
                             break
                         lines.append(line.rstrip('\n'))
 
-                    file_info['total_lines'] = i + 1 if i < max_lines else i + 1 + 1  # +1表示还有更多行
+                        file_info['total_lines'] = i + 1 if i < max_lines else i + 1 + 1  # +1表示还有更多行
+                    
                     file_info['end_line'] = min(start_line + len(lines) - 1, file_info['total_lines'] - 1)
 
                     logger.log('WEBUI', f"读取文件 {rel_path} 内容, 从第 {start_line} 行起，共 {len(lines)} 行")
