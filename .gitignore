@@ -228,3 +228,4 @@ WechatAPI/Client/login_stat.json
 /.idea/sqldialects.xml
 /.idea/vcs.xml
 /.idea/XYBotV2.iml
+main_config.toml

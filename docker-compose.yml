@@ -1,6 +1,6 @@
 services:
   xybotv2:
-    image: henryxiaoyang/xybotv2:latest
+    image: foolishboys/xybotv2:latest
     container_name: XYBotV2
     restart: on-failure:3
     ports:
@@ -8,6 +8,7 @@ services:
     volumes:
       - xybotv2:/app
       - redis_data:/var/lib/redis
+      - ./main_config.toml:/app/main_config.toml
 
 volumes:
   redis_data:
